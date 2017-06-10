@@ -14,16 +14,27 @@
      limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp">
-    <TextView android:id="@+id/device_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"/>
-    <TextView android:id="@+id/device_address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dp"/>
+    android:padding="20dp"
+    android:weightSum="1">
+
+
+        <TextView
+            android:id="@+id/device_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24dp" />
+
+
 </LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\VICTOR\AndroidStudioProjects\IWheel\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="C:\Users\VICTOR\AndroidStudioProjects\IWheel\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_09c72bb72afd37f7de245c267597a3f407fe5d8f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\VICTOR\AndroidStudioProjects\IWheel\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="260fe27f0d22305784a57a3df42146bef239a471">
+        <dex dex="C:\Users\VICTOR\AndroidStudioProjects\IWheel\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_7bcca2a23e9c70cc56b64650a9cf010d0f1686a2\classes.dex" />
+    </item>
+
+</items>

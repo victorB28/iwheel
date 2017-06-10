@@ -20,146 +20,275 @@
     android:weightSum="1"
     android:padding="15dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_device_address"
-            android:textSize="18sp" />
-
-        <Space
-            android:layout_width="5dp"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/device_address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_state"
-            android:textSize="18sp" />
-
-        <Space
-            android:layout_width="5dp"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/connection_state"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/disconnected"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/label_data"
-            android:textSize="18sp" />
-
-        <Space
-            android:layout_width="5dp"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/isSerial"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/is_serial"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:background="#c0c0c0"/>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="10dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_state"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/connection_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/disconnected"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/security"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_data"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/isSerial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/is_serial"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/scan_barcode_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/scan_barcode_button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/result_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/no_barcode_captured" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/controller_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/joystick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Joystick" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/speech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Speech" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/movement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Movement" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_joystick_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="51dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/close_joystick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="X" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_joystick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:layout_weight="0.02"
+            android:background="@drawable/image_button_bg">
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_movement_controller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <Button
+                android:id="@+id/close_movement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="X" />
+
+
+        <SeekBar
+            android:id="@+id/customSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:max="200"
+            android:progress="0"
+            android:rotation="270"
+            android:thumb="@drawable/ic_launcher" />
+
+        <RadioButton
+            android:id="@+id/backward"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Light"
-            android:layout_weight="0.5"
-            android:gravity="center"
-            android:textSize="25sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fan"
-            android:layout_weight="0.5"
-            android:gravity="center"
-            android:textSize="25sp"/>
+            android:text="Backward"
+            android:id="@+id/textView"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/backward"
+            android:layout_toEndOf="@+id/backward"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-         />
-
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/layout_speech_controller"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:visibility="gone">
 
-        <ToggleButton
-            android:id="@+id/toggleButton1"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="ToggleButton"
-            android:background="@drawable/light0"/>
+            android:layout_height="match_parent">
 
-        <ToggleButton
-            android:id="@+id/toggleButton2"
+            <Button
+                android:id="@+id/close_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X" />
+        </RelativeLayout>
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:layout_centerInParent="true"
-            android:background="@drawable/fan0"/>
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.58"
+                android:text="Stop"
+                android:layout_marginBottom="77dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnSpeak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/button6"
+                android:layout_alignParentStart="true"
+                android:height="80dp"
+                android:text="Listen" />
 
-    </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
 
 </LinearLayout>

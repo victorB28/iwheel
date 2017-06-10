@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="xyz.arpith.blearduino">
+    package="tec2.victor.iwheel">
 
-    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
 
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="IWheel"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.Light.DarkActionBar">
         <activity android:name=".DeviceScanActivity">
@@ -22,8 +26,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DeviceControlActivity"/>
-        <service android:name=".BluetoothLeService" android:enabled="true"/>
+        <activity android:name=".DeviceControlActivity" />
+        <activity
+            android:name=".barcode.BarcodeCaptureActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <service
+            android:name=".BluetoothLeService"
+            android:enabled="true" />
+
+        <activity android:name=".joystick.JoyStickClass" />
     </application>
 
 </manifest>

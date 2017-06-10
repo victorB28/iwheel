@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BLEArduino</string>
+    <string name="app_name">IWheel</string>
     <string name="ble_not_supported">BLE is not supported</string>
     <string name="label_data">Compatable:</string>
     <string name="label_device_address">Device address:</string>
@@ -7,7 +7,7 @@
     <string name="no_data">No data</string>
     <string name="connected">Connected</string>
     <string name="disconnected">Disconnected</string>
-    <string name="title_devices">BLE Device Scan</string>
+    <string name="title_devices">IWheel Chair Scan</string>
     <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
 
     <string name="unknown_device">Unknown device</string>
@@ -20,4 +20,32 @@
     <string name="menu_scan">Scan</string>
     <string name="menu_stop">Stop</string>
     <string name="is_serial">Serial Present:</string>
+
+
+    <string name="scan_barcode_button">Scan barcode</string>
+    <string name="no_barcode_captured">No barcode captured</string>
+    <string name="barcode_error_format">"Error reading barcode: %1$s"</string>
+
+    <!-- Strings related to barcode scanner -->
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="tap_on_mic">Tap on mic to speak</string>
+
+
+    <string name="default_xR">5</string>
+    <string name="default_xMax">7</string>
+    <string name="default_yMax">5</string>
+    <string name="default_yThreshold">50</string>
+    <string name="default_pwmMax">255</string>
+    <string name="default_commandLeft">L</string>
+    <string name="default_commandRight">R</string>
+    <string name="default_commandHorn">H</string>
+    <string name="default_pwmBtnMotorLeft">500</string>
+    <string name="default_pwmBtnMotorRight">500</string>
+    <string name="default_xRperc">60</string>
 </resources>
